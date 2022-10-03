@@ -19,7 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 18
+if (votingAge >= 18) {
+  console.log(true)
+} else {
+  console.log(false)
+}
 
 
 /*
@@ -33,9 +38,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+let firstThing = 0
+let secondThing = 1 
+if (secondThing = 1) {
+  firstThing = 2
+}
+console.log(firstThing)
 
 
 /*
@@ -48,8 +56,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let numb = '1999'
+Number(numb)
+console.log(numb)
 
 
 /*
@@ -60,12 +69,14 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
+let a = 2
+let b = 2
+function multiply(a, b){
+  return a * b;
 
-function multiply(num1, num2){
-  return num1 * num2;
 }
-
-
+multiply
+console.log(multiply)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
