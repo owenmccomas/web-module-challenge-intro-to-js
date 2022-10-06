@@ -178,39 +178,69 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-let computer = Math.random()
+// let computer = Math.random()
 
-if(computer <= 0.333){
-  computer = 'rock';
-} else if(computer <= 0.666){
-  computer = 'paper';
-} else if(computer <= 1){
-  computer = 'scissors';
-} 
-console.log(computer)
+// if(computer <= 0.333){
+//   computer = 'rock';
+// } else if(computer <= 0.666){
+//   computer = 'paper';
+// } else if(computer <= 1){
+//   computer = 'scissors';
+// } 
+// console.log(computer)
 
-function game(user, computer){
-  if (user === 'paper' && computer === 'paper') {
-    console.log("it's a tie")
-  } else if (user === 'paper' && computer === 'scissors') {
-    console.log('you lose!')
-  }  else if (user === 'paper' && computer === 'rock') {
-    console.log('you win!')
-  }  else if (user === 'rock' && computer === 'scissors') {
-    console.log('you win!')
-  }  else if (user === 'rock' && computer === 'paper') {
-    console.log('you lose!')
-  } else if (user === 'rock' && computer === 'rock') {
-    console.log("it's a tie")
-  } else if (user === 'scissors' && computer === 'rock') {
-    console.log("you lose!")
-  } else if (user === 'scissors' && computer === 'scissors') {
-    console.log("it's a tie")
-  } else if (user === 'scissors' && computer === 'paper') {
-    console.log("you win!")
-  }
+// function game(user, computer){
+//   if (user === 'paper' && computer === 'paper') {
+//     console.log("it's a tie")
+//   } else if (user === 'paper' && computer === 'scissors') {
+//     console.log('you lose!')
+//   }  else if (user === 'paper' && computer === 'rock') {
+//     console.log('you win!')
+//   }  else if (user === 'rock' && computer === 'scissors') {
+//     console.log('you win!')
+//   }  else if (user === 'rock' && computer === 'paper') {
+//     console.log('you lose!')
+//   } else if (user === 'rock' && computer === 'rock') {
+//     console.log("it's a tie")
+//   } else if (user === 'scissors' && computer === 'rock') {
+//     console.log("you lose!")
+//   } else if (user === 'scissors' && computer === 'scissors') {
+//     console.log("it's a tie")
+//   } else if (user === 'scissors' && computer === 'paper') {
+//     console.log("you win!")
+//   }
+// }
+let computer = Math.random();
+
+if (computer <= .34){
+  computer = 'rock'
+}
+else if (computer <= 0.67)
+{
+  computer = 'paper'
+}
+else if (computer > .67){
+  computer ='scissors'
 }
 
+
+function game(user, computer){
+  if (user === computer){
+    return "it's a tie"
+      }
+  else if (user === 'rock' && computer === 'scissors'){
+    return 'you win!'
+  }
+  else if (user === 'paper' && computer === 'rock'){
+    return 'you win!'
+  }
+  else if (user === 'scissors' && computer === 'paper'){
+    return 'you win!'
+  }
+  else {
+    return 'you lose!'
+    }
+  }
 
 
 
@@ -240,7 +270,7 @@ Using the feet function below do the following:
 */
 
 function feet(centimeters){
-  return centimeters * 30.48
+  return centimeters / 30.48
 }
 console.log(feet(3))
 
@@ -254,19 +284,18 @@ Using the annoyingSong function below do the following:
 2. The annoying song function should return the following string exactly one time:
 
     "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
+    
+    3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
+    4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
+    */
+   
+   function annoyingSong(number){
 
-3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
-4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
-*/
+    for(let i = number; i > 0; i--){
+      return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
+      }
+    } 
 
-function annoyingSong(number){
-    if (i=number != 1){
-      console.log(annoyingSong(number))
-    } else (annoyingSong(number))
-}
-for(let i = number; i > 0; i--){
-  return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
-}
 console.log(annoyingSong(100))
 
 
